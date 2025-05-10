@@ -41,58 +41,58 @@ export default function ExperienceSection() {
     const timelineDots = timelineRef.current.querySelectorAll('.timeline-dot');
     const timelineCards = timelineRef.current.querySelectorAll('.timeline-card');
     
-    // Animate timeline line
-    gsap.fromTo(
+    // Create a master timeline for better sequencing
+    const masterTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 75%',
+        toggleActions: 'play none none none',
+      }
+    });
+    
+    // Animate timeline line first
+    masterTimeline.fromTo(
       '.timeline-line',
       { height: 0 },
       {
         height: '100%',
-        duration: 1.5,
+        duration: 2.0, // Slower line drawing
         ease: 'power2.inOut',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-          end: 'bottom 70%',
-          scrub: 0.5,
-        },
       }
     );
     
-    // Animate timeline dots
-    gsap.fromTo(
+    // Animate timeline dots with increased duration
+    masterTimeline.fromTo(
       timelineDots,
       { scale: 0, autoAlpha: 0 },
       {
         scale: 1,
         autoAlpha: 1,
-        stagger: 0.3,
-        duration: 0.4,
+        stagger: 0.6, // Increased stagger time
+        duration: 0.7, // Slower animation
         ease: 'back.out(1.7)',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 75%',
-          toggleActions: 'play none none none',
-        },
-      }
+      }, 
+      "-=1.5" // Start a bit before the line finishes
     );
     
-    // Animate timeline cards with stagger for sequential appearance
-    gsap.fromTo(
+    // Animate timeline cards with increased stagger and duration
+    masterTimeline.fromTo(
       timelineCards,
       { x: (index) => index % 2 === 0 ? 50 : -50, autoAlpha: 0 },
       {
         x: 0,
         autoAlpha: 1,
-        stagger: 0.3,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 75%',
-          toggleActions: 'play none none none',
-        },
-      }
+        stagger: 0.8, // Much slower stagger for a more deliberate reveal
+        duration: 1.2, // Longer animation time
+        ease: 'power1.inOut', // Smoother easing
+      },
+      "-=1.8" // Start a bit before the dots finish
     );
+    
+    // Clean up ScrollTrigger when component unmounts
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
   
   return (
