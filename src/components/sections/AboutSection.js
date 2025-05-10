@@ -104,9 +104,16 @@ export default function AboutSection() {
           <div className="flex flex-col space-y-8">
             <div ref={imageRef} className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl opacity-0">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10"></div>
-              {/* Replace with your actual profile image */}
-              <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-                <p>Your Profile Image</p>
+              {/* Profile image */}
+              <div className="relative w-full h-full">
+                <Image 
+                  src="/Buwaneka.jpg" 
+                  alt="Buwaneka Halpage" 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="rounded-lg"
+                  priority
+                />
               </div>
             </div>
             
