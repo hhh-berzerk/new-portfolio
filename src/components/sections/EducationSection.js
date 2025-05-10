@@ -11,12 +11,12 @@ export default function EducationSection() {
   const education = [
     {
       institution: 'University of Moratuwa',
-      degree: 'B.Sc. Engineering in Computer Science and Engineering',
+      degree: 'B.Sc(Hons) in Computer Science and Engineering',
       period: '2024 - Present',
-      description: 'Currently pursuing a bachelor\'s degree with a focus on algorithms, data structures, software engineering, and artificial intelligence.',
+      description: 'Currently pursuing a bachelor\'s degree with a focus on Cyber Security, software engineering, and artificial intelligence.',
     },
     {
-      institution: 'ACHE',
+      institution: 'Rahula College Matara',
       degree: 'Advanced Level Education',
       period: '2020 - 2023',
       description: 'Completed advanced level studies with a focus on Mathematics, Physics, and Chemistry, achieving excellent results that secured admission to the University of Moratuwa.',

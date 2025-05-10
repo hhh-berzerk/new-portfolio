@@ -13,27 +13,27 @@ export default function ProjectsSection() {
     {
       title: 'Full-Stack Product Store',
       description: 'An e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product search, cart functionality, and payment integration.',
-      image: '/placeholder-project.jpg',
+      image: '/ecom.webp',
       tags: ['React', 'Node.js', 'MongoDB', 'Express'],
       liveLink: '#',
       githubLink: '#',
       inProgress: true,
     },
     {
-      title: 'HTML Portfolio',
-      description: 'Personal portfolio website built with HTML, CSS, and vanilla JavaScript. Responsive design with smooth animations and contact form.',
-      image: '/placeholder-project.jpg',
-      tags: ['HTML', 'CSS', 'JavaScript'],
+      title: 'My Humble Portfolio Website',
+      description: 'Personal portfolio website built with Next.js, Tailwind CSS, and vanilla JavaScript. Responsive design with smooth animations and contact form. I used GSAP for animations.',
+      image: '/portfolio.png',
+      tags: ['Next.js', 'Tailwind CSS', 'JavaScript'],
       liveLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/hhh-berzerk/new-portfolio.git',
     },
     {
       title: 'TinDOG Website Clone',
       description: 'A creative clone of a popular website with a dog-themed twist. Built using Bootstrap for responsive design and modern UI components.',
-      image: '/placeholder-project.jpg',
+      image: '/TinDog.png',
       tags: ['HTML', 'CSS', 'Bootstrap'],
-      liveLink: '#',
-      githubLink: '#',
+      liveLink: 'https://hhh-berzerk.github.io/TinDog/',
+      githubLink: 'https://github.com/hhh-berzerk/TinDog.git',
     },
   ]
   
@@ -109,13 +109,18 @@ export default function ProjectsSection() {
               className="project-card group bg-white dark:bg-dark-lighter rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 opacity-0"
             >
               <div className="relative h-48 w-full bg-gray-200 overflow-hidden">
-                {/* Replace with actual project images */}
-                <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-                  <p>Project Image</p>
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
                 
                 {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-primary/80 flex items-center justify-center gap-4 opacity-0 transition-opacity group-hover:opacity-100">
+                <div className="absolute inset-0 bg-primary/80 flex items-center justify-center gap-4 opacity-0 transition-opacity group-hover:opacity-100 z-10">
                   {project.liveLink && (
                     <Link 
                       href={project.liveLink}
@@ -143,7 +148,7 @@ export default function ProjectsSection() {
                 
                 {/* In Progress Badge */}
                 {project.inProgress && (
-                  <div className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <div className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded z-20">
                     In Progress
                   </div>
                 )}

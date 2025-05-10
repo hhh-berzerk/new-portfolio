@@ -9,24 +9,24 @@ export default function ExperienceSection() {
   
   const experiences = [
     {
-      title: 'oGT TL & STF Member',
+      title: 'oGT MED Team Leader',
       organization: 'AIESEC',
-      period: 'Jan 2023 - Present',
+      period: 'July 2024 - Feb 2025',
       description: 'Led a team to facilitate global talent exchanges. Handled outgoing talent management and supported the selection and training of new members.',
       icon: FiUsers,
     },
     {
-      title: 'OCVP Logistics & Publicity Lead',
-      organization: 'IEEE Xtreme, LEAD CS',
-      period: 'Mar 2023 - Oct 2023',
-      description: 'Managed logistics and publicity for the IEEE Xtreme programming competition. Created promotional materials and coordinated event logistics.',
+      title: 'Software Engineer',
+      organization: 'AIESEC in Sri Lanka',
+      period: 'Feb 2025 - Present',
+      description: 'Developed and maintained software applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver high-quality solutions.',
       icon: FiAward,
     },
     {
-      title: 'Batch Representative',
+      title: 'Field Representative',
       organization: 'University of Moratuwa',
-      period: 'Nov 2022 - Present',
-      description: 'Elected representative for Computer Science and Engineering batch. Coordinated between faculty and students to address academic concerns and improve student experience.',
+      period: 'March 2025 - Present',
+      description: 'Elected as a Field representative for 23rd batch of Computer Science and Engineering. Coordinated between faculty and students to address academic concerns and improve student experience.',
       icon: FiBriefcase,
     },
   ]

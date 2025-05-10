@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ThemeProvider } from '@/context/ThemeContext'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -20,7 +21,11 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 export default MyApp 

@@ -166,14 +166,14 @@ export default function ContactSection() {
     {
       icon: FiMail,
       title: 'Email',
-      content: 'youremail@example.com',
-      link: 'mailto:youremail@example.com',
+      content: 'hhhbhuwaneka@gmail.com',
+      link: 'mailto:hhhbhuwaneka@gmail.com',
     },
     {
       icon: FiPhone,
       title: 'Phone',
-      content: '+94 76 123 4567',
-      link: 'tel:+94761234567',
+      content: '+94 74 022 4877',
+      link: 'tel:+94740224877',
     },
     {
       icon: FiMapPin,
