@@ -1,14 +1,15 @@
 import Link from 'next/link'
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook, FiInstagram } from 'react-icons/fi'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/yourusername', icon: FiGithub },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/buwanekahalpage', icon: FiLinkedin },
-    { name: 'Twitter', href: 'https://twitter.com/yourusername', icon: FiTwitter },
-    { name: 'Email', href: 'mailto:your.email@example.com', icon: FiMail },
+    { name: 'GitHub', href: 'https://github.com/hhh-berzerk', icon: FiGithub },
+    { name: 'LinkedIn', href: 'https://lk.linkedin.com/in/buwaneka-halpage-4351122a7', icon: FiLinkedin },
+    { name: 'Facebook', href: 'https://www.facebook.com/people/Buwaneka-Halpage/pfbid02bCvYdYkPNsYqUeaTDS2f55nHRkXyHpvUvccSDFnuy5C4XN3rW4hy8rLTS1QUWEBPl/', icon: FiFacebook },
+    { name: 'Email', href: 'mailto:hhhbhuwaneka@gmail.com', icon: FiMail },
+    { name: 'Instagram', href: 'https://www.instagram.com/hhh_berzerk/', icon: FiInstagram },
   ]
   
   return (

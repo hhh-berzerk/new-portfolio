@@ -18,18 +18,19 @@ export default function HeroSection() {
     particlesContainer.className = 'absolute inset-0 overflow-hidden pointer-events-none z-0'
     sectionRef.current.appendChild(particlesContainer)
     
-    const numParticles = 20 // Even fewer particles
+    const numParticles = 25 // Slightly more particles
     const particles = []
     
     for (let i = 0; i < numParticles; i++) {
       const particle = document.createElement('div')
-      particle.className = 'absolute rounded-full bg-primary opacity-10'
+      // Make particles darker (opacity 0.2 instead of 0.1)
+      particle.className = 'absolute rounded-full bg-primary opacity-20'
       
-      const size = Math.random() * 20 + 5 // Smaller particles
+      const size = Math.random() * 25 + 5 // Slightly larger particles
       particle.style.width = `${size}px`
       particle.style.height = `${size}px`
       
-      // Position particles away from the center/text area
+      // Position particles across the entire section
       const leftPosition = Math.random() * 100
       const topPosition = Math.random() * 100
       
@@ -40,14 +41,43 @@ export default function HeroSection() {
       particlesContainer.appendChild(particle)
       particles.push(particle)
       
-      // Small, gentle animations
+      // More dynamic and faster animations
       gsap.to(particle, {
-        x: Math.random() * 80 - 40, // Smaller movement range
-        y: Math.random() * 80 - 40,
-        duration: Math.random() * 7 + 4,
+        x: Math.random() * 150 - 75, // Same movement range
+        y: Math.random() * 150 - 75, // Same movement range
+        duration: Math.random() * 3 + 2, // Much shorter duration for faster movement (was 8+6)
         repeat: -1,
         yoyo: true,
         ease: 'sine.inOut',
+      })
+    }
+    
+    // Create additional fast-moving smaller particles for variety
+    for (let i = 0; i < 10; i++) {
+      const fastParticle = document.createElement('div')
+      fastParticle.className = 'absolute rounded-full bg-primary opacity-15'
+      
+      const size = Math.random() * 10 + 3 // Smaller particles
+      fastParticle.style.width = `${size}px`
+      fastParticle.style.height = `${size}px`
+      
+      const leftPosition = Math.random() * 100
+      const topPosition = Math.random() * 100
+      
+      fastParticle.style.left = `${leftPosition}%`
+      fastParticle.style.top = `${topPosition}%`
+      
+      particlesContainer.appendChild(fastParticle)
+      particles.push(fastParticle)
+      
+      // Very fast animations for these particles
+      gsap.to(fastParticle, {
+        x: Math.random() * 100 - 50,
+        y: Math.random() * 100 - 50,
+        duration: Math.random() * 1.5 + 1, // Very fast movement
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut', // Different easing for variety
       })
     }
     
