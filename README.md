@@ -1,85 +1,95 @@
-# new-portfolio
-My new portfolio website made using Next js and React
+# Buwaneka's Portfolio Website
 
-# Portfolio Website Context – Buwaneka Halpage
+A modern, interactive personal portfolio website built with Next.js and React.
 
 ## 🎯 Purpose
 
 This is a single-page personal portfolio website for **Buwaneka Halpage**, a Computer Science and Engineering undergraduate at the University of Moratuwa. The purpose of the site is to showcase his technical skills, leadership experience, and personal projects in a modern, interactive, and visually appealing way. The portfolio serves as a digital resume, personal brand, and contact hub for potential collaborators, recruiters, or academic connections.
 
----
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 14.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/new-portfolio.git
+cd new-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## 🧱 Structure
 
-### 1. Hero Section
-- Full name and role: "Buwaneka Halpage – Aspiring Software Engineer"
-- Brief intro highlighting motivation and curiosity
-- CTA buttons: "Download CV", "Contact Me"
-- Background effect or subtle animation (e.g., particles, blurred hero image)
+The website consists of the following sections:
 
-### 2. About Me
-- Summary paragraph from CV
-- Key soft skills listed as bullet points or animated tags
-- Smooth scroll entry animation
-
-### 3. Skills
-- Programming Languages: Python, Java, C++, JavaScript, HTML, CSS
-- Frameworks/Tools: React, Node.js, Bootstrap 5, GitHub
-- Visual presentation with animated bars or rings on scroll
-
-### 4. Projects
-- List of notable projects with:
-  - Titles, tech stack, short description
-  - Live demo and/or GitHub links
-  - Image previews
-- Projects include:
-  - Full-Stack Product Store (ongoing)
-  - HTML Portfolio
-  - TinDOG website clone
-
-### 5. Experience
-- Timeline or card-style layout
-- Roles in AIESEC, IEEE, and university:
-  - oGT TL & STF Member – AIESEC
-  - OCVP Logistics & Publicity Lead – IEEE Xtreme, LEAD CS
-  - Batch Representative – University of Moratuwa
-- Animations for smooth vertical scroll reveal
-
-### 6. Education & Certifications
-- Academic timeline:
-  - University of Moratuwa – B.Sc. Eng (CSE), 2024–Present
-  - ACHE
-- Relevant certifications:
-  - Angela Yu Full-Stack Bootcamp (Udemy)
-  - HackerRank Gold in Python
-  - C++ Beginner Course
-
-### 7. Contact
-- Display of email, phone, location
-- Contact form with validation and success alert
-- Footer with a thank you note and social links
-
----
+1. **Hero Section**: Introduction with call-to-action buttons
+2. **About Me**: Personal summary and soft skills
+3. **Skills**: Technical skills displayed with animated progress bars
+4. **Projects**: Showcase of notable projects with links
+5. **Experience**: Timeline of professional and leadership experiences
+6. **Education & Certifications**: Academic background and relevant certifications
+7. **Contact**: Contact form and information
 
 ## ✨ Features & Animations
+
+- Responsive design for all device sizes
+- Animated UI elements using GSAP
 - Smooth scrolling navigation
-- Scroll-triggered animations (fade, slide, zoom)
-- Responsive design for desktop and mobile
-- Interactive skill bars and project hover effects
-- Optional light/dark mode switch
-
----
-
-## 📌 Target Audience
-- Potential employers or internship coordinators
-- Technical community members
-- University peers and project collaborators
-- AIESEC and IEEE connections
-
----
+- Optimized for performance
+- Contact form with validation
+- Modern, clean design
 
 ## 🚀 Tech Stack
-- Next js and React Js
-- GSAP for animations
-- Vercel for deployment
 
+- **Next.js**: React framework for production
+- **React**: UI library
+- **TailwindCSS**: Utility-first CSS framework
+- **GSAP**: Animation library
+- **React Icons**: Icon library
+- **Vercel**: Deployment platform
+
+## 📌 Deployment
+
+The site is ready to be deployed to Vercel, Netlify, or any other hosting provider. For Vercel deployment:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+Then deploy to Vercel:
+
+```bash
+npx vercel
+```
+
+## 🧑‍💻 Development
+
+- `npm run dev`: Start development server
+- `npm run build`: Build production version
+- `npm run start`: Start production server
+- `npm run lint`: Run linting checks
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 

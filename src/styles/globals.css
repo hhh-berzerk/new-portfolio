@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+  
+  /* Remove any forced opacity rules */
+  /* Let GSAP handle all animations and visibility */
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-md transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-dark;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply mb-12 text-center;
+  }
+  
+  /* Animation helper classes */
+  .animate-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .animate-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Progress bar animation base */
+  .progress-bar {
+    width: 0%; /* Start with 0 width, GSAP will animate to the correct width */
+    transition: width 1.5s ease-out;
+  }
+} 
